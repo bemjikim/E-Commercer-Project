@@ -1,0 +1,25 @@
+<!-- Use products array in product-list.components.ts -->
+<table class = "table">
+
+    <thead class = "table-dark">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Units in Stock</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor = "let tempProduct of products">
+            <td class = "algin-middle">
+                <img src = "{{ tempProduct.imageUrl }}" height = "50"/>
+            </td>
+            <td class = "algin-middle">{{ tempProduct.name }}</td>
+            <td class = "algin-middle">{{ tempProduct.unitPrice | currency: 'KRW' }}</td>
+            <td class = "algin-middle">{{ tempProduct.unitsInStock }}</td>
+        </tr>
+    </tbody>
+
+</table>
+
